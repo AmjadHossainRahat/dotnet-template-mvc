@@ -1,0 +1,18 @@
+﻿@{
+    ViewData["Title"] = "Login";
+}
+<h2>Login</h2>
+
+@if (TempData["RegistrationSuccess"] != null)
+{
+    <div class="alert alert-success">@TempData["RegistrationSuccess"]</div>
+}
+
+<p>Login form will be implemented in the next step.</p>
+
+@if ((bool?)ViewBag.RegistrationEnabled == true)
+{
+    <p>
+        <a asp-controller="Auth" asp-action="Register">Register a new account</a>
+    </p>
+}
